@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Password Generator</h1>
+        
+        <div class="result-container">
+            <input type="text" id="password-display" readonly placeholder="The password will be displayed here.">
+            <button id="copy-btn" title="Copy">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="length-container">
+            <div class="length-text">
+                <span>Password length:</span>
+                <span id="length-val">12</span>
+            </div>
+            <input type="range" id="password-length" min="6" max="24" value="12">
+        </div>
+
+        <div class="options-container">
+            <label class="checkbox-label">
+                <input type="checkbox" id="uppercase" checked> Include Uppercase 
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="lowercase" checked> Include Lowercase 
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="numbers" checked> Include Numbers 
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="symbols"> Include Symbols 
+            </label>
+        </div>
+
+        <div class="strength-container">
+            <div class="strength-text">Safety level: <span id="strength-label">Medium</span></div>
+            <div class="strength-bar-bg">
+                <div id="strength-bar-fill"></div>
+            </div>
+        </div>
+
+        <button id="generate-btn">Generate Password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
